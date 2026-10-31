@@ -1,0 +1,78 @@
+
+
+
+
+
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; line-height: 1.5; color: #24183b; background: #f7f3fc; }
+.container { width: 92%; max-width: 1050px; margin: 0 auto; }
+
+
+
+
+.site-header { background: linear-gradient(120deg, #30125f, #6330a8); color: #fff; padding: 30px 0; }
+.site-header p { margin-top: 0; }
+.course-label { font-size: 0.85rem; margin: 0 0 8px; text-transform: uppercase; letter-spacing: 0.06em; color: #eadbff; }
+h1 { font-size: 2rem; margin: 0 0 8px; }
+h2 { font-size: 1.25rem; margin: 0 0 18px; color: #3e1c75; }
+h3 { font-size: 1rem; margin: 0 0 8px; }
+.student-label { margin-bottom: 0; color: #eadbff; font-size: 0.9rem; }
+
+
+
+
+.page-layout { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 24px; padding-top: 28px; }
+.panel { min-width: 0; background: #fff; padding: 24px; border: 1px solid #ded4eb; border-radius: 8px; box-shadow: 0 4px 18px rgb(48 18 95 / 6%); }
+.purchases { grid-column: 1 / -1; }
+
+
+
+
+.balance-card { background: #eee4fb; border-radius: 6px; padding: 18px; margin-bottom: 18px; }
+.balance-value { font-size: 2rem; font-weight: bold; margin: 0; overflow-wrap: anywhere; color: #482087; }
+.total-card { border: 1px solid #ded4eb; padding: 14px; border-radius: 6px; }
+.total-value { font-size: 1.25rem; font-weight: bold; margin: 0; overflow-wrap: anywhere; }
+.hint { font-size: 0.88rem; color: #655b72; }
+
+
+
+
+.form-field { margin-bottom: 16px; }
+label { display: block; font-weight: bold; margin-bottom: 6px; }
+input { width: 100%; padding: 11px; border: 1px solid #a99bbd; border-radius: 4px; font: inherit; background: #fff; }
+.submit-button { background: #552397; color: #fff; border: 0; border-radius: 4px; padding: 12px 20px; font: inherit; font-weight: bold; cursor: pointer; }
+.submit-button:hover { background: #39136f; }
+input:focus-visible, button:focus-visible { outline: 3px solid #b36bfa; outline-offset: 3px; }
+.message { min-height: 1.5em; margin-bottom: 0; font-weight: bold; color: #482087; }
+
+
+
+
+.purchase-list { padding-left: 22px; margin-bottom: 0; }
+.purchase-list li { padding: 10px 0; border-bottom: 1px solid #ded4eb; overflow-wrap: anywhere; }
+.site-footer { padding-top: 18px; padding-bottom: 24px; font-size: 0.88rem; color: #655b72; }
+
+
+
+
+@media (max-width: 700px) {
+  .page-layout { grid-template-columns: 1fr; }
+  .panel { padding: 18px; }
+}
+@media (max-width: 450px) {
+  h1 { font-size: 1.6rem; }
+}
+
+[hidden] { display:none !important; }
+.account { margin-top:28px; }
+#auth-form { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.actions { display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+#auth-form .actions { grid-column:1/-1; }
+button { font:inherit; cursor:pointer; border:1px solid #a99bbd; border-radius:4px; padding:9px 14px; background:#f5effc; color:#3e1c75; }
+button:disabled { opacity:.6; cursor:wait; }
+select { width:100%; padding:11px; border:1px solid #a99bbd; border-radius:4px; background:white; font:inherit; }
+select:focus-visible { outline:3px solid #b36bfa; outline-offset:3px; }
+.purchase-list li { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+.purchase-list li span { flex:1; min-width:180px; }
+#account-status { overflow-wrap:anywhere; }
+@media(max-width:700px) { #auth-form { grid-template-columns:1fr; } }

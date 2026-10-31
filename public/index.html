@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Investment Purchase Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <p class="course-label">COP 5818 · PA2 · Express and SQLite</p>
+      <h1>Investment Purchase Tracker</h1>
+      <p>Record what you bought and how much you invested.</p>
+      <p class="student-label">Created by Crispen Chachengwa · Secure Investment Purchase Tracker</p>
+    </div>
+  </header>
+
+  <main class="container">
+<section class="panel account" aria-labelledby="account-heading">
+<h2 id="account-heading">Your account</h2>
+<form id="auth-form" novalidate>
+<div class="form-field"><label for="email">Email</label><input id="email" type="email" autocomplete="username" maxlength="254" required></div>
+<div class="form-field"><label for="password">Password</label><input id="password" type="password" autocomplete="current-password" minlength="8" maxlength="128" required></div>
+<div class="actions"><button id="login-button" class="submit-button" type="submit">Log in</button><button id="register-button" type="button">Register</button></div>
+</form><p id="account-status" role="status">Log in or register using fictional details.</p>
+<button id="logout-button" type="button" hidden>Log out</button>
+</section>
+<p id="message" class="message" role="status" aria-live="polite"></p>
+<div id="tracker-panel" class="page-layout" hidden>
+    <section class="panel summary" aria-labelledby="summary-heading">
+      <h2 id="summary-heading">Purchase summary</h2>
+
+      <div class="balance-card">
+        <h3>Total invested</h3>
+        <p id="total-invested" class="balance-value">$0.00</p>
+      </div>
+      <div class="total-card">
+        <h3>Number of purchases</h3>
+        <p id="purchase-count" class="total-value">0</p>
+      </div>
+      <p class="hint">Purchase cost = quantity × price per unit.</p>
+      <p class="hint">All prices are in USD. Totals represent purchase costs, not current market values. Fees are not included.</p>
+    </section>
+    <section class="panel entry" aria-labelledby="entry-heading">
+      <h2 id="entry-heading">Add a purchase</h2>
+
+      <form id="purchase-form" novalidate>
+        <div class="form-field">
+          <label for="investment-name">Investment name</label>
+          <input id="investment-name" name="investment-name" maxlength="100" type="text" required placeholder="For example: Example Index Fund">
+        </div>
+        <div class="form-field">
+          <label for="quantity">Quantity</label>
+          <input id="quantity" name="quantity" type="number" required min="1" max="10000" step="1" placeholder="For example: 5" aria-describedby="quantity-help">
+          <p id="quantity-help" class="hint">For this exercise, enter 1–10,000 whole units.</p>
+        </div>
+        <div class="form-field">
+          <label for="unit-price">Price per unit ($)</label>
+          <input id="unit-price" name="unit-price" type="number" required min="0.01" max="1000000" step="0.01" placeholder="For example: 20.00" aria-describedby="price-help">
+          <p id="price-help" class="hint">Enter a positive price up to $1,000,000, with at most two decimal places.</p>
+        </div>
+
+        <div class="form-field"><label for="category">Category</label><select id="category" required></select></div>
+<div class="actions"><button id="save-button" type="submit" class="submit-button">Add purchase</button><button id="cancel-edit" type="button" hidden>Cancel edit</button></div>
+        </form>
+    </section>
+    <section class="panel purchases" aria-labelledby="history-heading">
+      <h2 id="history-heading">Purchase history</h2>
+
+      <p class="hint">Each entry shows the investment, quantity, price per unit, and purchase cost. Repeat purchases appear as separate entries.</p>
+      
+      <ul id="purchase-list" class="purchase-list"></ul>
+    </section>
+  </div></main>
+
+  <footer class="site-footer container">
+    <p>Practice with fictional purchases. Records are saved in SQLite. Totals show purchase costs, not market values.</p>
+  </footer>
+</body>
+</html>
