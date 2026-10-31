@@ -1,0 +1,22 @@
+{
+  "name": "investment-tracker-pa2",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test validation.test.js",
+    "test:integration": "node integration.test.js",
+    "evidence": "node capture-evidence.cjs"
+  },
+  "dependencies": {
+    "argon2": "^0.45.1",
+    "better-sqlite3": "^13.0.3",
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "express-session": "^1.19.0"
+  },
+  "devDependencies": {
+    "jsdom": "^30.1.3",
+    "playwright": "^1.64.1"
+  }
+}
