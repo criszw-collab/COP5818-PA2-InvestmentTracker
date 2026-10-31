@@ -1,0 +1,9 @@
+{
+  "status": "Pass",
+  "persistenceTotal": "$146.50",
+  "userACount": 2,
+  "userBCount": 0,
+  "unownedPut": 404,
+  "unownedDelete": 404,
+  "ownerRecordsUnchanged": true
+}

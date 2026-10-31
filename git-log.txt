@@ -1,0 +1,15 @@
+a76b8fc 2026-10-31T09:51:32-05:00 Crispen Chachengwa
+Set up PA2 starter, SQLite schema and security helper
+
+faba434 2026-10-31T09:52:00-05:00 Crispen Chachengwa
+Implement validated owner-scoped CRUD and session authentication
+
+5d34a09 2026-10-31T09:52:45-05:00 Crispen Chachengwa
+Connect PA1 purple interface to Fetch, categories, editing and sessions
+
+fabdab4 2026-10-31T09:58:49-05:00 Crispen Chachengwa
+Add security regression checks, isolated integration tests and setup documentation
+
+d02ae2e 2026-10-31T12:46:47-04:00 Crispen Chachengwa
+Review Windows browser evidence and finalize PA2 submission report
+

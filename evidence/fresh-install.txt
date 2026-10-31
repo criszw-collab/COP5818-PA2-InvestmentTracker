@@ -1,0 +1,9 @@
+Fresh extracted-source installation: PASS
+Runtime: Node.js 24.22.1 / npm 11.9.0
+npm ci: PASS
+Validation tests: 5 passed
+.env configured with new local random secret: PASS (value not recorded)
+Server startup and GET /api/health: 200 {"ok":true}
+Fresh SQLite database: 0 users, 0 purchases
+Seeded categories: Fund, Stock, Other
+No real credentials or application data used.

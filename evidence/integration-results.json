@@ -1,0 +1,57 @@
+{
+  "runtime": "v24.22.1",
+  "assertions": 98,
+  "method": "Real HTTP/SQLite with jsdom DOM execution; no real-browser screenshots or visual layout verification.",
+  "observations": [
+    {
+      "check": "1",
+      "status": "Pass",
+      "result": "Two fictional users registered; duplicate normalized email 409; invalid email/password 400; registration did not log in; incorrect login generic 401."
+    },
+    {
+      "check": "2",
+      "status": "Pass",
+      "result": "Unauthenticated reads and valid-token mutation 401; missing/wrong CSRF 403 before and after login; incorrect Origin 403; no mutation."
+    },
+    {
+      "check": "3",
+      "status": "Pass",
+      "result": "DOM form submission through real HTTP created two purchases and displayed $146.50."
+    },
+    {
+      "check": "4",
+      "status": "Pass",
+      "result": "Reload restored live session; server process restart lost session, then login restored both SQLite purchases and $146.50. Screenshot still needs local capture."
+    },
+    {
+      "check": "5",
+      "status": "Pass",
+      "result": "DOM edit changed quantity to 4 and total to $162.00; delete left one purchase and $62.00."
+    },
+    {
+      "check": "6",
+      "status": "Pass",
+      "result": "B saw zero A records; direct PUT/DELETE of A returned 404; injected ownerId/id/costCents ignored and A record unchanged. Screenshot still needs local capture."
+    },
+    {
+      "check": "7",
+      "status": "Pass",
+      "result": "Invalid POST/PUT types and bounds, non-object bodies, and invalid IDs returned 400; missing record 404; no stored changes."
+    },
+    {
+      "check": "8",
+      "status": "Pass",
+      "result": "DOM rendering preserved literal <b>Example</b> with no b element. Repeated names produced separate records."
+    },
+    {
+      "check": "9",
+      "status": "Pass",
+      "result": "Stopped-server DOM save showed connection error, retained inputs and restored button. Cancel and invalid precision made no mutation. Inspect history before retrying an uncertain save."
+    },
+    {
+      "check": "10",
+      "status": "Pass",
+      "result": "Malformed JSON returned JSON 400; unknown API route returned JSON 404; Argon2id hashes verified; logout cleared private DOM and totals. ZIP exclusions verified separately."
+    }
+  ]
+}
